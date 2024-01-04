@@ -1,4 +1,4 @@
- 
+ <!DOCTYPE html>
 <html>
   <head>
     <title>family recognition</title>
@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
 
    <link rel="stylesheet" href="style.css">
-  
+   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
   </head>
 
   <body>
@@ -21,12 +21,11 @@
       <br><br>
       <p style="font-size: 22px;">Model is trained to identify the following family members: </p>
 <b class="family_members">
-  Father
   <hr>
   Mother
   <hr>
-  Me
-  <hr>
+  me
+   <hr>
 </b>
       <label>Webcam View - </label>
 <div id="camera"></div>
@@ -38,8 +37,8 @@
 <button onclick="check();" class="btn">Identify person</button>
       <br><br>
 
-      <p style="font-size: 22px;">Person :  </p>
-      <p style="font-size: 22px;">Accuracy :  </p>
+      <p id="person_name" style="font-size: 22px;">Person :  </p>
+      <p id="accuracy" style="font-size: 22px;">Accuracy :  </p>
     </center>
 
   </div>
